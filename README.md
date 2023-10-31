@@ -1,5 +1,9 @@
-## NextJS Demo App
-This is a demo app using NextJS.  It includes role based user authentication and registration.  It uses prisma to model a postgresql database.
+# NextJS Demo App
+This is a demo app using NextJS.  
+
+### Features
+* role based user authentication and registration using NextAuth.  
+* Prisma ORM modeling a postgresql database.
 
 ### Local Dev
 Add env variables to .env.local:
