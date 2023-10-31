@@ -10,11 +10,12 @@ AUTH_GITHUB_ID= "";
 AUTH_GITHUB_SECRET= "";
 ```
 
-Run a local postgresql instance in Docker
+Run a local postgresql instance in Docker:
 ```bash
 docker run --name <instance name goes here>  -p 5455:5432 -e POSTGRES_USER=<db username> -e POSTGRES_PASSWORD=<db password> -e POSTGRES_DB=<db name> -d postgres
 ```
 
+Run the app locally:
 ```bash
 npm run dev
 ```
