@@ -4,7 +4,7 @@ import githubProvider from './providers/Github';
 import credentialsProvider from './providers/Credentials';
 
 
-export const authOptions: AuthOptions = {
+const authOptions: AuthOptions = {
   // Configure one or more authentication providers
   providers: [
     credentialsProvider,
@@ -16,6 +16,6 @@ export const authOptions: AuthOptions = {
   }
 };
 
-export const handler = NextAuth(authOptions);
+const handler = NextAuth(authOptions);
 
 export { handler as GET, handler as POST };
