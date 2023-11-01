@@ -9,20 +9,19 @@ declare module 'next-auth' {
     user?: {
       id: number,
       email: string,
-      username?: string,
-      role?: string,
-      avatarUrl?: string,
-      fullname?: string,
+      username?: string | null,
+      role?: string| null,
+      avatarUrl?: string| null,
+      fullname?: string| null,
     } & DefaultUser,
   };
 
   interface User extends DefaultUser {
     id?: number,
     email: string,
-    username?: string,
-    role?: string,
-    avatarUrl?: string,
-    fullname?: string,
+    username?: string | null,
+    role?: string | null,
+    fullname?: string | null,
   }
 }
 
@@ -31,9 +30,9 @@ declare module 'next-auth/jwt' {
     user?: {
       id: number,
       username: string,
-      role?: string,
-      avatarUrl?: string,
-      fullname?: string,
+      role?: string | null,
+      avatarUrl?: string | null,
+      fullname?: string | null,
     }
   }
 }

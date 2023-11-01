@@ -1,5 +1,4 @@
 import CredentialsProvider from 'next-auth/providers/credentials';
-import { User } from 'next-auth';
 import UserService from '@/app/services/user/UserService';
 import { compare } from 'bcrypt';
 
@@ -10,7 +9,7 @@ const credentialsProvider = CredentialsProvider({
     if (!email || !password) {
       throw new Error('Missing username or password');
     }
-    const user = await UserService.getByEmailorUsername(email);
+    const user = await UserService.getByEmailorUsername({ email });
     // if user doesn't exist or password doesn't match
     if (!user || !(await compare(password, user.password))) {
       throw new Error('Invalid username or password');

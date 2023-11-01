@@ -10,6 +10,10 @@ export const authOptions: AuthOptions = {
     credentialsProvider,
     githubProvider,
   ],
+  pages: {
+    signIn: '/auth/signin',
+    error: '/auth/signin', // Error code passed in query string as ?error=
+  }
 };
 
 export const handler = NextAuth(authOptions);
