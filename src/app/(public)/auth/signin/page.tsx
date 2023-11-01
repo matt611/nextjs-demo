@@ -30,7 +30,7 @@ function Signin() {
             setError(error);
           } else {
             router.refresh();
-            router.push('/');
+            router.push('/dashboard');
           }
         });
       }}
