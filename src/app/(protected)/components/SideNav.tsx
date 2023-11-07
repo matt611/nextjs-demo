@@ -30,8 +30,8 @@ function SideNav() {
           </li>
         </Link>
         { session?.user?.role === 'admin' &&
-          <Link href="/admin">
-            <li className={pathname === '/admin' ? ACTIVE_ROUTE : INACTIVE_ROUTE}>
+          <Link href="/members/admin">
+            <li className={pathname === '/members/admin' ? ACTIVE_ROUTE : INACTIVE_ROUTE}>
               admin
             </li>
           </Link>
