@@ -11,7 +11,7 @@ export default function AuthLayout({
       <TopNav />
       <div className='flex'>
         <SideNav />
-        <div className='flex bg-white rounded-xl w-full text-gray-900 justify-center items-center m-r-2 m-t-2 mb-2'>
+        <div className='flex bg-white rounded-xl w-full text-gray-900 justify-center items-center mr-2 mt-2 mb-2'>
           {children}
         </div>
       </div>
