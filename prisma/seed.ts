@@ -4,15 +4,13 @@ import { hash } from 'bcrypt';
 
 const prisma = new PrismaClient();
 
-console.log('PRISMA SEED');
 async function main() {
-  console.log('Running main');
   const password = process.env.ADMIN_PASSWORD;
 
   if (!password) return 'FAILED TO SEED DB: No admin password';
 
   const adminPassword = await hash(password, 10);
-  console.log('INSERT AN ADMIN');
+
   const admin: User = await prisma.user.upsert({
     where: { email: 'admin@example.com' },
     update: {},
@@ -23,8 +21,6 @@ async function main() {
       role: 'admin',
     },
   });
-  console.log('DONE');
-  console.log({ admin });
 }
 
 main()
