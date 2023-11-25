@@ -16,7 +16,7 @@ export async function GET(req: NextRequest, { params }: { params: { id: string }
     username: true,
     fullname: false,
     avatarUrl: true,
-  }
+  };
 
   if (session?.user?.id === id) {
     fields.role = true;
